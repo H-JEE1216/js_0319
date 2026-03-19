@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <script>
+
+            let num = 1;
+            let path = "resources/image/img"
+
+            function next(){
+                num++;
+
+                if( num > 7 ){
+                    num = 1;
+                }
+
+                document.getElementById('gallery').src = 
+                    path + num + ".jpg"
+            }//next()
+        </script>
+    </head>
+
+    <body>
+        <a href="#" onclick="prev()">
+            <img src="resources/image/left_btn.png"/>
+        </a>
+
+        <img src="resources/image/img1.jpg" 
+            width="300" height="200" id="gallery"/>
+
+        <a href="#" onclick="next()">
+            <img src="resources/image/right_btn.png"/>
+        </a>
+    </body>
+
+</html>

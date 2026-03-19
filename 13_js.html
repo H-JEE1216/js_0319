@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <script>
+            function send( n ){
+                //document(body)에 있는 'myp'요소를 불러온다는 의미 ->
+                // p태그를 let myp에 담음 ->
+                // .innerHTML 태그를 이용해 p태그 사이에 값을 넣는다.
+                let myp = document.getElementById('myp')
+                myp.innerHTML = n;
+            }
+
+            function send2(  ){
+                let txt = document.getElementById("txt")
+                let myp = document.getElementById('myp')
+                //txt.value = "안녕하세요"
+                myp.innerHTML = txt.value;
+            }
+
+            function result(){
+                let inp = 
+                Number(document.getElementById('input1').value)
+
+                let res = '';
+                for( let i = 0; i < inp; i++ ){
+                    res += "<li>메뉴</li>"
+                }
+                let ul = document.getElementById('myul')
+                ul.innerHTML = res;
+
+            }
+        </script>
+    </head>
+
+    <body>
+        <input type="button" value="버튼1" onclick="send('안녕')"/>
+
+        <p id="myp"></p>
+
+        <hr/>
+
+        <input type="text" size="5" id="txt" value="123"/>
+        <input type="button" value="확인" onclick="send2()"/>
+
+        <hr/>
+        
+        <!-- default값은 type="text"이다 -->
+        <input id="input1"/>
+        <input type="button" value="확인" onclick="result()"/>
+
+        <ul id="myul"></ul>
+
+    </body>
+
+</html>
