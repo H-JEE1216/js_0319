@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <script>
+            //프롬프트에서 값을 받고, if문을 사용하여
+            //아래와 같은 결과를 노출해보도록 해자.
+
+            /*
+                점수 : 50
+                성적 : F
+            */
+
+            /*
+                90이상 : A
+                80이상 : B
+                70이상 : C
+                60이상 : D
+                59이하 : F
+            */
+
+            let score = Number(prompt("점수"))
+            let al = '';
+            
+            if( score >= 90 ){
+                al = 'A'
+            }else if( score >= 80 ){
+                al = 'B'
+            }else if( score >= 70 ){
+                al = 'C'
+            }else if( score >= 60 ){
+                al = 'D'
+            }else{ al = 'F' }
+
+            document.write( "점수 : " + score + "<br/>")
+            document.write( "성적 : " + al )
+        </script>
+    </head>
+
+    <body></body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <script>
+            /*
+            프롬프트를 통해서 국어, 영어, 수학점수를 받는다
+            세과목의 총점과 평균을(소수점 2자리까지) 출력*/
+
+            //값을 받을 때 아예 문자열을 정수형태로 받으면 코드를 간결하게 할 수 있다!
+            let korean = Number(prompt( "국어 점수는?" ))
+            let math = Number(prompt( "수학 점수는?" ))
+            let english = Number(prompt( "영어 점수는?" ))
+
+            let total = korean + math + english
+            avg = total / 3 
+
+            document.write( "총점 : " + total + "점<br/>"
+                            + "평균 : " + avg.toFixed(2) + "점"
+             )
+        </script>
+    </head>
+
+    <body></body>
+</html>
